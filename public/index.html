@@ -27,8 +27,43 @@
     <title>React App</title>
   </head>
   <body>
+    <header class="header container-fluid">
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="header__logo">
+            <img src="./assets/logo.png" alt="">
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="header container-fluid">
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="header__menuBar">
+            <button type="button" class="btn btn-link header__menuBar__link">About Us</button>
+            <button type="button" class="btn btn-link header__menuBar__link">Services</button>
+            <button type="button" class="btn btn-link header__menuBar__link">Gallery</button>
+            <button type="button" class="btn btn-link header__menuBar__link">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="breadcrumb-container container-fluid">
+      <div class="row">
+        <div class="col">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb-container__breadcrumb breadcrumb">
+              <li class="breadcrumb-item active" aria-current="page">Home</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+
+    <div id="ReactApp"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +74,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <footer>Footer</footer>
   </body>
 </html>

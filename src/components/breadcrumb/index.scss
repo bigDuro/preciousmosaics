@@ -1,0 +1,22 @@
+$backgroundColor: #282c34;
+
+.breadcrumb-container{
+  border-bottom: 1px solid #36373c;
+  border-top: 1px solid #212224;
+  background-color: $backgroundColor;
+  &__breadcrumb {
+    background-color: $backgroundColor;
+    padding: 0px;
+    margin: 10px 0px;
+    font-size: 12px;
+  }
+}
+
+.breadcrumb {
+  &-item {
+    color: #a5cbd4;
+    &.active {
+      color: #a5cbd4;
+    }
+  }
+}
