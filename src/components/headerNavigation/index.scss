@@ -20,6 +20,10 @@ $xl: 1200px;
   .headerNavigation {
     &__menuBar {
       text-align: right;
+      &__link, &__link:hover {
+        color: #ccc;
+        font-size: 1rem;
+      }
     }
   }
 }
