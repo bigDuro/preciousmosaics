@@ -1,0 +1,25 @@
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+.headerNavigation {
+  border-top: 1px solid #4A5460;
+  background-color: #1D2026;
+  color: #ccc;
+  &__menuBar {
+    text-align: center;
+    &__link, &__link:hover {
+      color: #ccc;
+      font-size: 12px;
+    }
+  }
+}
+
+@media (min-width: $sm) {
+  .headerNavigation {
+    &__menuBar {
+      text-align: right;
+    }
+  }
+}
