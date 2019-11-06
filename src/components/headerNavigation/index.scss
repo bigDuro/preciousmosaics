@@ -25,6 +25,7 @@ $xl: 1200px;
       border-radius: 3px;
       &__label {
         transition: .5s ease-out;
+        margin-top: 20px;
       }
 
       &--on+&__label, &--off:checked+&__label {
@@ -70,9 +71,10 @@ $xl: 1200px;
   .headerNavigation {
     background-color: #1D2026;
     border-top: 1px solid #4A5460;
+    position: relative;
     &__menuBar {
       text-align: right;
-      margin-left: auto;
+      margin-left: auto !important;
       min-height: 0px;
       &__toggle__label {
         display: none;
