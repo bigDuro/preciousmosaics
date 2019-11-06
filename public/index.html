@@ -5,10 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="description" content="Order picture mosaics by Precious Mosaics"/>
     <link rel="apple-touch-icon" href="logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -24,7 +21,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Precious Mosaics</title>
   </head>
   <body>
     <header class="header container-fluid">
@@ -38,12 +35,19 @@
     </header>
     <nav class="headerNavigation container-fluid">
       <div class="row align-items-center">
-        <div class="col">
+        <div class="col-7 col-sm-12">
+          <input id="open" name="toggle" type="radio" class="btn btn-link headerNavigation__menuBar__toggle headerNavigation__menuBar__toggle--on"></input>
+          <label class="headerNavigation__menuBar__toggle__label headerNavigation__menuBar__toggle--on" for="open"><i class="headerNavigation__menuBar__toggle__icon fas fa-bars"></i></label>
+          <input id="close" name="toggle" type="radio" class="btn btn-link headerNavigation__menuBar__toggle headerNavigation__menuBar__toggle--off" checked></input>
+          <label class="headerNavigation__menuBar__toggle__label headerNavigation__menuBar__toggle--off" for="close"><i class="headerNavigation__menuBar__toggle__icon far fa-window-close"></i></label>
           <div class="headerNavigation__menuBar">
-            <button type="button" class="btn btn-link headerNavigation__menuBar__link">About Us</button>
-            <button type="button" class="btn btn-link headerNavigation__menuBar__link">Services</button>
-            <button type="button" class="btn btn-link headerNavigation__menuBar__link">Gallery</button>
-            <button type="button" class="btn btn-link headerNavigation__menuBar__link">Contact Us</button>
+            <div class="headerNavigation__menuBar__links">
+              <button type="button" class="btn btn-link headerNavigation__menuBar__link">About Us</button>
+              <button type="button" class="btn btn-link headerNavigation__menuBar__link">Services</button>
+              <button type="button" class="btn btn-link headerNavigation__menuBar__link">Gallery</button>
+              <button type="button" class="btn btn-link headerNavigation__menuBar__link">Contact Us</button>
+            </div>
+
           </div>
         </div>
       </div>
@@ -63,17 +67,33 @@
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <div id="ReactApp"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div id="ReactApp">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="content">
+              <p>This is some content</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-    <footer class="footer">Footer</footer>
+    <footer class="footer container-fluid">
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+          <div class="footer__copyright">
+            <p>2019 www.preciousmosaics.com</p>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="footer__social">
+            <i class="footer__social__icon fab fa-facebook-f"></i>
+            <i class="footer__social__icon fab fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
