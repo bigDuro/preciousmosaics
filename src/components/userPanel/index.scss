@@ -27,5 +27,13 @@
         margin-left: 5px;
       }
     }
+    &__form {
+      padding: 0 10px;
+      &__cancel {
+        position: absolute;
+        top: 0;
+        right: 10px;
+      }
+    }
   }
 }
