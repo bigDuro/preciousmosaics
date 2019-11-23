@@ -4,25 +4,89 @@ $lg: 992px;
 $xl: 1200px;
 
 .headerNavigation {
-  border-top: 1px solid #4A5460;
-  background-color: #1D2026;
   color: #ccc;
+  position: absolute;
+  top: 0;
   &__menuBar {
-    text-align: center;
+    background-color: #1D2026;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+    margin-left: -15px;
+    width: 100%;
+    transition: .5s ease-out;
+    padding-top: 20px;
+    &__toggle {
+      position: absolute;
+      visibility: hidden;
+      text-align: right;
+      color: #ccc;
+      background-color: #1D2026;
+      border-radius: 3px;
+      &__label {
+        transition: .5s ease-out;
+        margin-top: 20px;
+      }
+
+      &--on+&__label, &--off:checked+&__label {
+        left: 0px;
+      }
+      &--on:checked+&__label, &--off+&__label {
+        left: 175px;
+      }
+      &--on:not(:checked)+&__label, &--off:not(:checked)+&__label {
+        position: absolute;
+        z-index: 4;
+      }
+
+      &--on:checked+&__label, &--off:checked+&__label {
+        // display: none;
+      }
+      &--off:checked+&__label+.headerNavigation__menuBar {
+        margin-left: -200px;
+      }
+      &__label {
+        text-align: right;
+        background-color: #1D2026;
+        padding: 5px;
+        border-radius: 5px;
+        position: absolute;
+        z-index: 2;
+        &__icon {
+
+        }
+      }
+    }
     &__link, &__link:hover {
+      width: 100%;
       color: #ccc;
       font-size: 12px;
+      text-align: left;
+      border-bottom: #3c424f solid 1px;
     }
   }
 }
 
 @media (min-width: $sm) {
   .headerNavigation {
+    background-color: #1D2026;
+    border-top: 1px solid #4A5460;
+    position: relative;
     &__menuBar {
       text-align: right;
+      margin-left: auto !important;
+      min-height: 0px;
+      &__toggle__label {
+        display: none;
+      }
+      &__close {
+        display: none;
+      }
       &__link, &__link:hover {
         color: #ccc;
         font-size: 1rem;
+        width: auto;
+        border-bottom: none;
       }
     }
   }

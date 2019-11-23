@@ -93,7 +93,7 @@ class UserPanel extends React.Component {
   }
   loggedInPanel = () => {
     return (
-      <div className="User__Panel ">
+      <div className="User__Panel">
         <p className="User__Panel__UserName">Welcome, {this.state.user.name} </p>
         <a href="/" onClick={this.handleLogout} className="User__Panel__Button">Logout <i className="User__Panel__Button__icon fas fa-user"></i></a>
       </div>
